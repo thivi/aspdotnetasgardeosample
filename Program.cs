@@ -16,9 +16,9 @@ builder.Services.AddAuthentication(options => {
 .AddOpenIdConnect(o => 
 {
     o.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    o.ClientId = "Eh8WlavCWfrmbRChIYylfEAE0kwa";            // <- Fill Client ID
-    o.ClientSecret = "yeU_0TvVO4Dz6GsqoMiN9jbzAsQa";        // <- Fill Client Secret
-    o.Authority = "https://stage.api.asgardeo.io/t/thivi/oauth2/token";           // <- Authority link. Assuming https://api.asgardeo.io/t/{org_name}/oidc ?
+    o.ClientId = "client-id";            // <- Fill Client ID
+    o.ClientSecret = "client-secret";        // <- Fill Client Secret
+    o.Authority = "https://stage.api.asgardeo.io/t/<tenant>/oauth2/token";           // <- Authority link. Assuming https://api.asgardeo.io/t/{org_name}/oidc ?
     o.ResponseType = OpenIdConnectResponseType.Code;
     o.ResponseMode = OpenIdConnectResponseMode.Query;
     o.GetClaimsFromUserInfoEndpoint = true;
